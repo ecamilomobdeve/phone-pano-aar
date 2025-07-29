@@ -2,6 +2,9 @@ pipeline {
     agent any
 
     environment {
+        ANDROID_HOME = '/Users/rene/Library/Android/sdk'  // 👈 update if needed
+        PATH = "${env.ANDROID_HOME}/tools:${env.ANDROID_HOME}/platform-tools:${env.PATH}"
+
         // Artifactory credentials injected via Jenkins Credentials plugin
         ARTIFACTORY_USER     = credentials('ARTIFACTORY_USER')
         ARTIFACTORY_PASSWORD = credentials('ARTIFACTORY_PASSWORD')
