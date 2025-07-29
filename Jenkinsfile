@@ -22,11 +22,11 @@ pipeline {
                     def versionSuffix = (env.CHANGE_ID) ? "-beta-${env.BUILD_NUMBER}" : ""
 
                     sh """
-                    ./gradlew :mylibrary:publishReleasePublicationToMavenRepository \\
-                        -PartifactoryRepo=${artifactoryRepo} \\
-                        -PversionSuffix=${versionSuffix} \\
-                        -Partifactory_contextUrl=${ARTIFACTORY_URL} \\
-                        -Partifactory_user=${ARTIFACTORY_USER} \\
+                    ./gradlew :mylibrary:publish \
+                        -PartifactoryRepo=${artifactoryRepo} \
+                        -PversionSuffix=${versionSuffix} \
+                        -Partifactory_contextUrl=${ARTIFACTORY_URL} \
+                        -Partifactory_user=${ARTIFACTORY_USER} \
                         -Partifactory_password=${ARTIFACTORY_PASSWORD}
                     """
                 }
