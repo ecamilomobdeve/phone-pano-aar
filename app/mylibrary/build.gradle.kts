@@ -53,7 +53,34 @@ val versionName: String = versionProps.getProperty("versionName")
 group = "com.example"
 version = versionName
 
+
 afterEvaluate {
+    publishing {
+        publications {
+            create<MavenPublication>("release") {
+                from(components["release"]) // Waits until 'release' component exists
+
+                groupId = group as String
+                artifactId = "mylibrary"
+                version = versionName
+            }
+        }
+
+        repositories {
+            maven {
+                name = "jfrog"
+                url = uri("${findProperty("artifactory_contextUrl")}/artifactory/${findProperty("artifactoryRepo")}")
+                credentials {
+                    username = findProperty("artifactory_user") as String?
+                    password = findProperty("artifactory_password") as String?
+                }
+            }
+        }
+    }
+}
+
+
+/*afterEvaluate {
     publishing {
         publications {
             create<MavenPublication>("release") {
@@ -69,6 +96,6 @@ afterEvaluate {
             }
         }
     }
-}
+}*/
 
 
