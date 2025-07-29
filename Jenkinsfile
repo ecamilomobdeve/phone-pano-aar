@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         // Artifactory credentials injected via Jenkins Credentials plugin
-        ARTIFACTORY_USER     = credentials('gitECAMILO.MOBDEVE@GMAIL.COM')
+        ARTIFACTORY_USER     = credentials('ECAMILO.MOBDEVE@GMAIL.COM')
         ARTIFACTORY_PASSWORD = credentials('YrgUeREWcqjhYdMXKgEkUqtIxBAKQgRdYNzHNCWOHMwsTZVgWgeoBfvDwsOCayWhNSraHWgjhnVBgYsEoYTfSavYlZNGTxPMsFwFgOzuVvAAClQxlwhuGIcvpcLWMELpTsgWFeuoqqnkvwfhIKmRofepbuPaEdpejiuNwlatZINrCBQKOPcHtZUzsIlgnhmwLofjWYtPXrZrRJLZqdvfoQYNocjJAEzpHNvFmgSwkRXdspPQDXYiHTavqcBtgXFDswkGGyFaibzdibGtRPaYwxTlvRQYnWSyTpZIwwbyJZvImYQnlxQOlzfAeZpbvxuwkfxzkLoOcewwJRzTJLKDolfCqmSATlbPFsNquPZYhvrLPufaGzqJKwaxSelhAwjbFsfEcntelLeOGGzbbwCTjNSAoCMcfYQAbPqozFLADaDSDumfoSXCjBkcKuHQPklgMUZWCbJpdREFwdhKRrrpHKOYLJEwZxSMgGiSCErXTakrQcwVMTitNuyIceAwUYBSUmjgqVIydgrDLubMXKNqDHhHHFmQkDAEHNhbcVakHiJetrmPqpLaoSjTWtWKQhphZldJreAoOpKHcChRohgsXjNBxnzZpNqHEFLGRxgESQWvhjKRxDNvwlaeMBxSImJWnOiHFFEOXcCFepHZJjLdvdoxXdKBJQEjEVhBCieLUBfzGtvlFKJoKQOleNgB')
         ARTIFACTORY_URL      = 'https://demo.jfrog.io/artifactory'
     }
