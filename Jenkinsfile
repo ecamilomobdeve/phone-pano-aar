@@ -3,8 +3,8 @@ pipeline {
 
     environment {
         // Artifactory credentials injected via Jenkins Credentials plugin
-        ARTIFACTORY_USER     = credentials('ARTIFACTORY_USER')
-        ARTIFACTORY_PASSWORD = credentials('ARTIFACTORY_PASSWORD')
+        ARTIFACTORY_USER     = credentials('ecamilo.mobdeve@gmail.com')
+        ARTIFACTORY_PASSWORD = credentials('Andr01d1@')
         ARTIFACTORY_URL      = 'https://demo.jfrog.io/artifactory'
     }
 
