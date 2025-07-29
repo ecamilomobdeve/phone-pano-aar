@@ -69,7 +69,7 @@ afterEvaluate {
         repositories {
             maven {
                 name = "jfrog"
-                url = uri("${findProperty("artifactory_contextUrl")}/artifactory/${findProperty("artifactoryRepo")}")
+                url = uri("${findProperty("artifactory_contextUrl")}/${findProperty("artifactoryRepo")}")
                 credentials {
                     username = findProperty("artifactory_user") as String?
                     password = findProperty("artifactory_password") as String?
