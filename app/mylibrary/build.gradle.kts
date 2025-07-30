@@ -1,4 +1,6 @@
 import java.util.Properties
+import org.gradle.api.publish.maven.MavenPublication
+
 
 plugins {
     alias(libs.plugins.android.library)
@@ -70,6 +72,7 @@ afterEvaluate {
             maven {
                 name = "jfrog"
                 url = uri("${findProperty("artifactory_contextUrl")}/${findProperty("artifactoryRepo")}")
+                isAllowInsecureProtocol  = true
                 credentials {
                     username = findProperty("artifactory_user") as String?
                     password = findProperty("artifactory_password") as String?
