@@ -69,6 +69,7 @@ afterEvaluate {
         }
 
         repositories {
+            mavenLocal()
             maven {
                 name = "jfrog"
                 url = uri("${findProperty("artifactory_contextUrl")}/${findProperty("artifactoryRepo")}")
